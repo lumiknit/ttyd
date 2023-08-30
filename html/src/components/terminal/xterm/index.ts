@@ -389,6 +389,18 @@ export class Xterm {
                     break;
             }
         });
+        const theme = terminal.options.theme;
+        if (theme) {
+            const bg = theme.background;
+            console.log('Theme.bg: ' + bg);
+            if (bg) {
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) {
+                    console.log('meta: ' + meta);
+                    meta.setAttribute('content', bg);
+                }
+            }
+        }
     }
 
     @bind
