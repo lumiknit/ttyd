@@ -51,6 +51,14 @@ const flowControl = {
 
 export class App extends Component {
     render() {
+        const theme = termOptions.theme;
+        if (theme) {
+            const bg = theme.background;
+            if (bg) {
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) meta.setAttribute('content', bg);
+            }
+        }
         return (
             <Terminal
                 id="terminal-container"
