@@ -7,12 +7,14 @@ body {
 }
 
 #terminal-container {
-  width: auto;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
   margin: 0 auto;
   padding: 0;
   .terminal {
-    padding: 5px;
-    height: calc(100% - 10px);
+    height: 100dvh;
+  }
+  .xterm-screen {
+    margin: auto;
   }
 }
