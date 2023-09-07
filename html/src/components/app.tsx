@@ -54,9 +54,13 @@ export class App extends Component {
         const theme = termOptions.theme;
         if (theme) {
             const bg = theme.background;
+            console.log('Theme.bg: ' + bg);
             if (bg) {
                 const meta = document.querySelector('meta[name="theme-color"]');
-                if (meta) meta.setAttribute('content', bg);
+                if (meta) {
+                    console.log('meta: ' + meta);
+                    meta.setAttribute('content', bg);
+                }
             }
         }
         return (
